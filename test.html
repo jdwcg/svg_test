@@ -17,38 +17,42 @@
       stroke-dasharray: 450;
       stroke-dashoffset: 450;
     }
-    .squiggle2 {
-      stroke-dasharray: 450;
-      stroke-dashoffset: 450;
-    }
+    .squiggle2 {      stroke-dasharray: 450;      stroke-dashoffset: 450;    }
+    .squiggle3 {      stroke-dasharray: 450;      stroke-dashoffset: 450;    }
+    .squiggle4 {      stroke-dasharray: 450;      stroke-dashoffset: 450;    }
+    .squiggle5 {      stroke-dasharray: 450;      stroke-dashoffset: 450;    }
 
-    @keyframes draw {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-    @keyframes draw2 {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
+    @keyframes draw {      to {        stroke-dashoffset: 0;      }    }
+    @keyframes draw2 {      to {        stroke-dashoffset: 0;      }    }
+    @keyframes draw3 {      to {        stroke-dashoffset: 0;      }    }
+    @keyframes draw4 {      to {        stroke-dashoffset: 0;      }    }
+    @keyframes draw5 {      to {        stroke-dashoffset: 0;      }    }
 
   </style>
   <div class="contain">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 403.44 74.33">
-      <path class="squiggle" fill="none" stroke="#bc85ff" stroke-miterlimit="10" stroke-width="3" d="M2.30004 24.8999C2.30004 24.8999 0.100043 42.1999 2.30004 44.3999C4.50004 46.5999 33.4 63.1999 37 61.6999C41.3 60.2999 45.7 69.5999 45.7 50.8999C45.7 32.1999 7.40004 21.2999 43.5 21.9999C79.6 22.6999 83.2 29.1999 91.9 37.8999C99.8 46.5999 128 16.9999 110.7 8.9999C93.4 0.999903 53.6 0.399902 53.6 0.399902" />
-      <path class="squiggle2" fill="none" stroke="#bc85ff" stroke-miterlimit="10" stroke-width="3" d="M63.5 12.5C58.8334 13.8334 52.7 19.3 65.5 30.5C81.5 44.5 76 63 85 53C94 43 92 30 94 23C96 16 113.5 16 94 11C74.5 6.00002 49.5 4.00002 38.5 7.50002" />
+      <path class="squiggle" fill="none" stroke="#bc85ff" stroke-miterlimit="10" stroke-width="1" d="M33.7 6.89995L41.7 4.39995L43.5 12.6L51.7 14.4L49.0999 22.4L55.4 28L49.0999 33.7L51.7 41.7L43.5 43.5L41.7 51.7L33.7 49.0999L28 55.4L22.4 49.0999L14.4 51.7L12.6 43.5L4.39995 41.7L6.89995 33.7L0.699951 28L6.89995 22.4L4.39995 14.4L12.6 12.6L14.4 4.39995L22.4 6.89995L28 0.699951L33.7 6.89995Z" />
+      <path class="squiggle2" fill="none" stroke="#bc85ff" stroke-miterlimit="10" stroke-width="1" d="M27.7 10C17.9 10.2 10 18.2 10 28C10 37.9 18.1 46 28 46C37.9 46 46 38 46 28C46 18 38 10 28 10" />
+      <path class="squiggle3" fill="none" stroke="#bc85ff" stroke-miterlimit="10" stroke-width="1" d="M24.9 34C24.9 35.7 26.2 37 27.9 37C29.6 37 30.9 35.7 30.9 34" />
+      <path class="squiggle4" fill="none" stroke="#bc85ff" stroke-miterlimit="10" stroke-width="1" d="M32.7 23.2V27.2" />
+      <path class="squiggle5" fill="none" stroke="#bc85ff" stroke-miterlimit="10" stroke-width="1" d="M22.9 23.2V27.2" />
     </svg>
   </div>
 
 <script>
   let squiggle = document.querySelector('.squiggle');
   let squiggle2 = document.querySelector('.squiggle2');
+  let squiggle3 = document.querySelector('.squiggle3');
+  let squiggle4 = document.querySelector('.squiggle4');
+  let squiggle5 = document.querySelector('.squiggle5');
   const activate = () => {
      let yOffset = window.pageYOffset;
     if(yOffset > 10) {
-      squiggle.style.animation = 'draw 2s linear forwards';
-      squiggle2.style.animation = 'draw 5s ease forwards';
+      squiggle.style.animation = 'draw 3s linear forwards';
+      squiggle2.style.animation = 'draw2 3s linear forwards';
+      squiggle3.style.animation = 'draw3 3s linear forwards';
+      squiggle4.style.animation = 'draw4 3s linear forwards';
+      squiggle5.style.animation = 'draw5 3s linear forwards';
     } else if(yOffset < 10) {
     }
   }
