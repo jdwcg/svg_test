@@ -13,8 +13,6 @@
       position: relative;
       top: 200px;
     }
-
-
     .squiggle {
       stroke-dasharray: 450;
       stroke-dashoffset: 450;
@@ -43,8 +41,6 @@
     </svg>
   </div>
 
-
-
 <script>
   let squiggle = document.querySelector('.squiggle');
   let squiggle2 = document.querySelector('.squiggle2');
@@ -52,7 +48,7 @@
      let yOffset = window.pageYOffset;
     if(yOffset > 10) {
       squiggle.style.animation = 'draw 2s linear forwards';
-      squiggle2.style.animation = 'draw 2s linear forwards';
+      squiggle2.style.animation = 'draw 5s ease forwards';
     } else if(yOffset < 10) {
     }
   }
