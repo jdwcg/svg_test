@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    html, body {height: 110%;}
+    .contain {
+      position: relative;
+      top: 200px;
+    }
+
+
+    .squiggle {
+      stroke-dasharray: 450;
+      stroke-dashoffset: 450;
+    }
+    .squiggle2 {
+      stroke-dasharray: 450;
+      stroke-dashoffset: 450;
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes draw2 {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+  </style>
+  <div class="contain">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 403.44 74.33">
+      <path class="squiggle" fill="none" stroke="#bc85ff" stroke-miterlimit="10" stroke-width="3" d="M2.30004 24.8999C2.30004 24.8999 0.100043 42.1999 2.30004 44.3999C4.50004 46.5999 33.4 63.1999 37 61.6999C41.3 60.2999 45.7 69.5999 45.7 50.8999C45.7 32.1999 7.40004 21.2999 43.5 21.9999C79.6 22.6999 83.2 29.1999 91.9 37.8999C99.8 46.5999 128 16.9999 110.7 8.9999C93.4 0.999903 53.6 0.399902 53.6 0.399902" />
+      <path class="squiggle2" fill="none" stroke="#bc85ff" stroke-miterlimit="10" stroke-width="3" d="M63.5 12.5C58.8334 13.8334 52.7 19.3 65.5 30.5C81.5 44.5 76 63 85 53C94 43 92 30 94 23C96 16 113.5 16 94 11C74.5 6.00002 49.5 4.00002 38.5 7.50002" />
+    </svg>
+  </div>
+
+
+
+<script>
+  let squiggle = document.querySelector('.squiggle');
+  let squiggle2 = document.querySelector('.squiggle2');
+  const activate = () => {
+     let yOffset = window.pageYOffset;
+    if(yOffset > 10) {
+      squiggle.style.animation = 'draw 2s linear forwards';
+      squiggle2.style.animation = 'draw 2s linear forwards';
+    } else if(yOffset < 10) {
+    }
+  }
+  window.addEventListener('scroll', ()=>{
+    activate()
+  })
+</script>
+</body>
+</html>
